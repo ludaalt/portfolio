@@ -9,8 +9,19 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[hash].js",
   },
+  devServer: {
+    port: 3000,
+  },
   plugins: [
     new HTMLWebpackPlugin({ template: "./src/index.html" }),
     new CleanWebpackPlugin(),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.(jpg|jpeg|png|svg)/,
+        use: ["file-loader"],
+      },
+    ],
+  },
 };
