@@ -16,6 +16,7 @@ module.exports = {
     new HTMLWebpackPlugin({ template: "./src/index.html" }),
     new CleanWebpackPlugin(),
   ],
+
   module: {
     rules: [
       {
@@ -23,21 +24,19 @@ module.exports = {
         use: ["file-loader"],
       },
       {
-        test: /\.m?js$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: {
-            loader: "babel-loader",
-            options: {
-              presets: ["@babel/preset-env"],
-            },
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
           },
         },
       },
       {
         test: /\.jsx$/,
         exclude: /node_modules/,
-        loader: {
+        use: {
           loader: "babel-loader",
           options: {
             presets: ["@babel/preset-react", "@babel/preset-env"],
@@ -45,5 +44,9 @@ module.exports = {
         },
       },
     ],
+  },
+
+  resolve: {
+    extensions: [".js", ".jsx"],
   },
 };
