@@ -56,7 +56,14 @@ const projects = [
 ];
 
 const ProjectsList = () => {
-  return <List data={projects} isLinkList isProjectList listTitle="Projects" />;
+  return (
+    <List
+      data={projects}
+      isLinkList
+      isProjectList
+      listTitle="Projects (finished and not)"
+    />
+  );
 };
 
 export default ProjectsList;
