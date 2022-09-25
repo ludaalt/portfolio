@@ -18,7 +18,6 @@ const projects = [
     title: "Todo",
     description:
       "This is a list of work tasks, a list of pending cases, a shopping list and much more",
-    linkToProject: "#",
     linkToCode: "https://github.com/ludaalt/todoapp",
   },
   {
@@ -30,7 +29,6 @@ const projects = [
   {
     title: "Tamagotchi",
     description: "Simple Tamagotchi game",
-    linkToProject: "#",
     linkToCode: "https://github.com/ludaalt/tamagotchi",
   },
   {
@@ -50,7 +48,6 @@ const projects = [
     title: "Weather App",
     description:
       "An application that helps you find out the weather in the right city",
-    linkToProject: "#",
     linkToCode: "https://github.com/ludaalt/weatherapp",
   },
 ];
